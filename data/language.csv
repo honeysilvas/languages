@@ -1,4 +1,4 @@
-"id","name","code","created_at","updated_at","deleted_at"
+"language_id","language_name","language_code","language_date_created","language_date_updated","language_date_deleted"
 "1","English","en","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00 00:00:00"
 "2","Afar","aa","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00 00:00:00"
 "3","Abkhazian","ab","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00 00:00:00"

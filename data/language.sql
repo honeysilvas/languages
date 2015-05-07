@@ -11,7 +11,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 09:23 PM
+-- Generation Time: May 08, 2015 at 01:55 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -25,26 +25,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Table structure for table `languages`
+-- Table structure for table `language`
 --
 
-CREATE TABLE IF NOT EXISTS `languages` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `name` char(50) NOT NULL,
-  `code` char(2) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  KEY `name` (`name`),
-  KEY `code` (`code`)
+CREATE TABLE IF NOT EXISTS `language` (
+  `language_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `language_name` char(50) NOT NULL,
+  `language_code` char(2) NOT NULL,
+  `language_date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `language_date_updated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `language_date_deleted` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`language_id`),
+  KEY `name` (`language_name`),
+  KEY `code` (`language_code`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=136 ;
 
 --
--- Dumping data for table `languages`
+-- Dumping data for table `language`
 --
 
-INSERT INTO `languages` (`id`, `name`, `code`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `language` (`language_id`, `language_name`, `language_code`, `language_date_created`, `language_date_updated`, `language_date_deleted`) VALUES
 (1, 'English', 'en', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'Afar', 'aa', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 'Abkhazian', 'ab', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
